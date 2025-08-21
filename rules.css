@@ -1,0 +1,88 @@
+header {
+  display: flex;
+  align-items: center;
+  background-color: #7da3c9;
+  padding: 10px 20px;
+}
+
+header .logo img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+nav a.active {
+  color: #f0f44b;
+}
+
+footer {
+  background: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+}
+
+.rules-section {
+  background: url("images/rulesimg.jpg");
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  width: 80%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.overlay h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #0a3d62;
+}
+
+.rules-container {
+  display: flex;
+  gap: 40px;
+  text-align: left;
+}
+
+.rules-box {
+  flex: 1;
+}
+
+.rules-box h2 {
+  margin: 15px 0 10px;
+  font-size: 1.3rem;
+  color: #0a3d62;
+}
+
+.rules-box ul {
+  margin-left: 20px;
+}
+
+.rules-box ul li {
+  margin-bottom: 8px;
+}
