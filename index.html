@@ -3,33 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGGS Badminton-Home</title>
-  <link rel="stylesheet" href="index.css">
+  <title>AGGS Badminton</title>
+  <!-- Linking font awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-  <div class="logo">
-    <img src="images/logo.jpeg" alt="AGGS Logo" />
-  </div>
-     <nav>
-      <a href = "index.html" class="active">Home</a>
-      <a href = "about.html">About Us</a>
-      <a href = "rules.html">Rules</a>
-      <a href = "schedules.html">Schedules</a>
-      <a href = "leaderboard.html">Leader Board</a>
-      <a href = "join.html">Join Us</a>
-     </nav>
-  </header>
+  <nav class="navbar section-content">
+    <a href="#" class="nav-logo">
+      <h2 class="logo-text">🏸 AGGS Badminton</h2>
+    </a>
+
+    <!-- Open Menu Button (hamburger) -->
+    <button id="menu-open-button" class="fas fa-bars" aria-label="Open Menu"></button>
+
+    <!-- Mobile Nav Menu -->
+    <ul class="nav-menu">
+      <!-- Close Button (inside menu) -->
+      <button id="menu-close-button" class="fas fa-times" aria-label="Close Menu"></button>
+
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+      <li class="nav-item"><a href="rules.html" class="nav-link">Rules</a></li>
+      <li class="nav-item"><a href="schedules.html" class="nav-link">Schedules</a></li>
+      <li class="nav-item"><a href="leaderboard.html" class="nav-link">Leader Board</a></li>
+      <li class="nav-item"><a href="join.html" class="nav-link">Join Us</a></li>
+    </ul>
+  </nav>
+</header>
+
   <main>
-    <h1>AGGS BADMINTON</h1>
-    <img src = "images/main-image.jpg"
-    alt="Girls playing badmintton"/>
-    <h3>Where players are built and served</h3>
+    <!--Hero Section-->
+    <section class="hero-section">
+      <div class="section-content">
+        <div class="hero-details">
+          <h2 class="title">Welcome to AGGS Badminton</h2>
+          <h3 class="subtitle">Smash Limits, Serve Greatness!</h3>
+          <p class="description">AGGS Badminton is a vibrant, student-led club where players of
+            all levels can train, compete, and have fun. We foster teamwork, skill development, and
+            school spirit through weekly practices, friendly matches, and interschool competitions.</p>
+
+            <div class="buttons">
+              <a href="#" class="button join-us">Join Us</a>
+            </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img src="Images/heroimg.jpg" alt="Hero" 
+          class="hero-image">
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>
-    <p>Telephone - +64 123 4567</p>
-    <p>Address - 16 Howe Street, Freemans Bay, Auckland 1011 </p>
-    <p>Email - badmintton@aggs.school.nz</p>
-  </footer>
+
+<footer class="site-footer">
+  <div class="section-content footer-content">
+    <div class="footer-left">
+      <h2 class="footer-logo">🏸 AGGS Badminton</h2>
+      <p>Smash limits, serve greatness.</p>
+    </div>
+
+    <div class="footer-social">
+      <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 AGGS Badminton Club. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

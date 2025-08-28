@@ -1,32 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGGS Badminton - Shedules</title>
-  <link rel="stylesheet" href="leaderboard.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Us | AGGS Badminton</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="join.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <div class="logo">
-    <img src="images/logo.jpeg" alt="AGGS Logo" />
-  </div>
-    <nav>
-      <a href = "index.html" >Home</a>
-      <a href = "about.html">About Us</a>
-      <a href = "rules.html">Rules</a>
-      <a href = "schedules.html">Schedules</a>
-      <a href = "leaderboard.html">Leader Board</a>
-      <a href = "join.html" class="active">Join Us</a>
+    <nav class="navbar section-content">
+      <a href="index.html" class="nav-logo">
+        <h2 class="logo-text">🏸 AGGS Badminton</h2>
+      </a>
+      <ul class="nav-menu">
+        <button id="menu-close-button" class="fas fa-times"></button>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="rules.html" class="nav-link">Rules</a></li>
+        <li><a href="schedules.html" class="nav-link">Schedules</a></li>
+        <li><a href="leaderboard.html" class="nav-link">Leader Board</a></li>
+        <li><a href="join.html" class="nav-link">Join Us</a></li>
+      </ul>
+      <button id="menu-open-button" class="fas fa-bars"></button>
     </nav>
   </header>
-  <main>
 
+  <!-- Join Us Form -->
+  <main class="join-section">
+    <div class="section-content">
+      <h1 class="join-title">🎉 Join AGGS Badminton</h1>
+      <p class="join-subtitle">Fill out the form below to express your interest!</p>
+
+      <form class="join-form" id="join-form">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="year-group">Year Group *</label>
+        <select id="year-group" name="year-group" required>
+          <option value="">Select your year</option>
+          <option value="Year 7">Year 9</option>
+          <option value="Year 8">Year 10</option>
+          <option value="Year 9">Year 11</option>
+          <option value="Year 10">Year 12</option>
+          <option value="Year 11">Year 13</option>
+        </select>
+
+        <label for="level">Skill Level *</label>
+        <select id="level" name="level" required>
+          <option value="">Choose a level</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+
+        <label for="message">Why do you want to join?</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell us a little about yourself..."></textarea>
+
+        <button type="submit" class="form-button">Submit</button>
+      </form>
+
+      <p id="form-message" class="form-message"></p>
+    </div>
   </main>
-  <footer>
-    <p>Telephone - +64 123 4567</p>
-    <p>Address - 16 Howe Street, Freemans Bay, Auckland 1011 </p>
-    <p>Email - badmintton@aggs.school.nz</p>
-  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const form = document.getElementById("join-form");
+    const message = document.getElementById("form-message");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // Basic validation feedback
+      message.textContent = "✅ Thanks for joining! We'll get back to you soon.";
+      message.style.color = "#388e3c";
+
+      // Reset form
+      form.reset();
+    });
+  </script>
+  <footer class="site-footer">
+  <div class="section-content footer-content">
+    <div class="footer-left">
+      <h2 class="footer-logo">🏸 AGGS Badminton</h2>
+      <p>Smash limits, serve greatness.</p>
+    </div>
+
+    <div class="footer-social">
+      <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 AGGS Badminton Club. All rights reserved.</p>
+  </div>
+</footer>
 </body>
 </html>

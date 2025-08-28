@@ -1,32 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGGS Badminton - Shedules</title>
-  <link rel="stylesheet" href="leaderboard.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leaderboard | AGGS Badminton</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="leaderboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <div class="logo">
-    <img src="images/logo.jpeg" alt="AGGS Logo" />
-  </div>
-    <nav>
-      <a href = "index.html" >Home</a>
-      <a href = "about.html">About Us</a>
-      <a href = "rules.html">Rules</a>
-      <a href = "schedules.html">Schedules</a>
-      <a href = "leaderboard.html" class="active">Leader Board</a>
-      <a href = "join.html">Join Us</a>
+    <nav class="navbar section-content">
+      <a href="index.html" class="nav-logo">
+        <h2 class="logo-text">🏸 AGGS Badminton</h2>
+      </a>
+      <ul class="nav-menu">
+        <button id="menu-close-button" class="fas fa-times"></button>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="rules.html" class="nav-link">Rules</a></li>
+        <li><a href="schedules.html" class="nav-link">Schedules</a></li>
+        <li><a href="leaderboard.html" class="nav-link">Leader Board</a></li>
+        <li><a href="join.html" class="nav-link">Join Us</a></li>
+      </ul>
+      <button id="menu-open-button" class="fas fa-bars"></button>
     </nav>
   </header>
-  <main>
 
+  <!-- Leaderboard Section -->
+  <main class="leaderboard-section">
+    <div class="section-content">
+      <h1 class="leaderboard-title">🏆 Leaderboard</h1>
+      <p class="leaderboard-subtitle">Top players based on match performance</p>
+
+      <div class="leaderboard-table">
+        <div class="leaderboard-row leaderboard-header">
+          <div onclick="sortBy('rank')">#</div>
+          <div>Player</div>
+          <div>Wins</div>
+          <div>Losses</div>
+          <div>Draws</div>
+        </div>
+
+        <!-- Example Player Rows -->
+        <div class="leaderboard-row">
+          <div>1</div>
+          <div>Abiitha F.</div>
+          <div>5</div>
+          <div>0</div>
+          <div>1</div>
+        </div>
+
+        <div class="leaderboard-row">
+          <div>2</div>
+          <div>Fiona L.</div>
+          <div>4</div>
+          <div>1</div>
+          <div>1</div>
+        </div>
+
+        <div class="leaderboard-row">
+          <div>3</div>
+          <div>Yonita Y.</div>
+          <div>3</div>
+          <div>2</div>
+          <div>1</div>
+        </div>
+
+        <div class="leaderboard-row">
+          <div>4</div>
+          <div>Avni L.</div>
+          <div>2</div>
+          <div>3</div>
+          <div>1</div>
+        </div>
+      </div>
+    </div>
   </main>
-  <footer>
-    <p>Telephone - +64 123 4567</p>
-    <p>Address - 16 Howe Street, Freemans Bay, Auckland 1011 </p>
-    <p>Email - badmintton@aggs.school.nz</p>
-  </footer>
+
+  <script src="script.js"></script>
+  <footer class="site-footer">
+  <div class="section-content footer-content">
+    <div class="footer-left">
+      <h2 class="footer-logo">🏸 AGGS Badminton</h2>
+      <p>Smash limits, serve greatness.</p>
+    </div>
+
+    <div class="footer-social">
+      <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 AGGS Badminton Club. All rights reserved.</p>
+  </div>
+</footer>
 </body>
 </html>

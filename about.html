@@ -1,48 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGGS-Badminton-About Us</title>
-  <link rel="stylesheet" href="about.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | AGGS Badminton</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
-    <header>
-    <div class="logo">
-    <img src="images/logo.jpeg" alt="AGGS Logo" />
-  </div>
-    <nav>
-      <a href = "index.html">Home</a>
-      <a href = "about.html"class="active">About Us</a>
-      <a href = "rules.html">Rules</a>
-      <a href = "schedules.html">Schedules</a>
-      <a href = "leaderboard.html">Leader Board</a>
-      <a href = "join.html">Join Us</a>
+
+  <!-- NAVBAR (SAME AS HOME) -->
+  <header>
+    <nav class="navbar section-content">
+      <a href="index.html" class="nav-logo">
+        <h2 class="logo-text">🏸 AGGS Badminton</h2>
+      </a>
+
+      <ul class="nav-menu">
+        <button id="menu-close-button" class="fas fa-times"></button>
+
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="nav-item"><a href="rules.html" class="nav-link">Rules</a></li>
+        <li class="nav-item"><a href="schedules.html" class="nav-link">Schedules</a></li>
+        <li class="nav-item"><a href="leaderboard.html" class="nav-link">Leader Board</a></li>
+        <li class="nav-item"><a href="join.html" class="nav-link">Join Us</a></li>
+      </ul>
+
+      <button id="menu-open-button" class="fas fa-bars"></button>
     </nav>
   </header>
-  <main>
-      <h1>ABOUT US</h1>
-      <div class="about-images">
-      <img src="images/about.jpg" alt="Shuttlecocks">
-      <img src="images/about3.jpg" alt="Badminton Match">
-      <img src="images/about2.jpg" alt="Shuttlecock on Court">
+
+  <!-- MAIN ABOUT SECTION -->
+  <main class="about-section">
+    <div class="section-content">
+      <h1 class="about-title">About AGGS Badminton</h1>
+      <p class="about-description">
+        AGGS Badminton is a student-led sports club fostering passion, growth, and teamwork through badminton. 
+        Whether you're new to the sport or a seasoned player, we provide a fun, inclusive, and competitive environment 
+        for all.
+      </p>
+
+      <div class="about-content">
+        <div class="about-text">
+          <h2>What We Offer</h2>
+          <ul>
+            <li>🏸 Weekly training sessions</li>
+            <li>🎯 Intra-school tournaments</li>
+            <li>🤝 Team building activities</li>
+            <li>🥇 Leaderboard rankings</li>
+            <li>🌟 Open to all year levels</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="Images/about-image.jpg" alt="Badminton team playing">
+        </div>
       </div>
-      <div class="about-text">
-        <p>
-        Welcome to the Auckland Girls’ Grammar Badminton Club! 
-        We are a community of passionate players who share a love for the fast-paced, 
-        dynamic sport of badminton. Our club is open to all skill levels, from beginners learning the basics 
-        to experienced players looking to sharpen their competitive edge. Beyond the game, we value 
-        teamwork, sportsmanship, and building friendships both on and off the court. Whether 
-        you’re here to improve your skills, compete in matches, or simply enjoy the fun and fitness 
-        of badminton, our club provides a supportive and inclusive space for everyone.
-        </p>
-      </div>
+    </div>
   </main>
-  <footer>
-    <p>Telephone - +64 123 4567</p>
-    <p>Address - 16 Howe Street, Freemans Bay, Auckland 1011 </p>
-    <p>Email - badmintton@aggs.school.nz</p>
-  </footer>
+
+  <script src="script.js"></script>
+
+  <footer class="site-footer">
+  <div class="section-content footer-content">
+    <div class="footer-left">
+      <h2 class="footer-logo">🏸 AGGS Badminton</h2>
+      <p>Smash limits, serve greatness.</p>
+    </div>
+
+    <div class="footer-social">
+      <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 AGGS Badminton Club. All rights reserved.</p>
+  </div>
+</footer>
 </body>
 </html>

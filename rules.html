@@ -1,76 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGGS Badminton-Rules</title>
-  <link rel="stylesheet" href="rules.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rules | AGGS Badminton</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="rules.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <div class="logo">
-    <img src="images/logo.jpeg" alt="AGGS Logo" />
-  </div>
-    <nav>
-      <a href = "index.html" >Home</a>
-      <a href = "about.html">About Us</a>
-      <a href = "rules.html"class="active">Rules</a>
-      <a href = "schedules.html">Schedules</a>
-      <a href = "leaderboard.html">Leader Board</a>
-      <a href = "join.html">Join Us</a>
+    <nav class="navbar section-content">
+      <a href="index.html" class="nav-logo">
+        <h2 class="logo-text">🏸 AGGS Badminton</h2>
+      </a>
+      <ul class="nav-menu">
+        <button id="menu-close-button" class="fas fa-times"></button>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="rules.html" class="nav-link">Rules</a></li>
+        <li><a href="schedules.html" class="nav-link">Schedules</a></li>
+        <li><a href="leaderboard.html" class="nav-link">Leader Board</a></li>
+        <li><a href="join.html" class="nav-link">Join Us</a></li>
+      </ul>
+      <button id="menu-open-button" class="fas fa-bars"></button>
     </nav>
   </header>
-  <main>
-    <section class="rules-section">
-    <div class="overlay">
-      <h1>RULES</h1>
 
-      <div class="rules-container">
-        <div class="rules-box">
-          <h2>Scoring System</h2>
-          <ul>
-            <li>Matches are played best of 3 games to 21 points.</li>
-            <li>Every rally counts (rally scoring system).</li>
-            <li>If the score reaches 20–20, a player/pair must win by 2 clear points (e.g., 22–20, 23–21).</li>
-          </ul>
+  <!-- Rules Section -->
+  <main class="rules-section">
+    <div class="section-content">
+      <h1 class="rules-title">Badminton Rules</h1>
+      <p class="rules-intro">Whether you're smashing in singles or rallying in doubles, knowing the rules ensures fair and fun play.</p>
 
-          <h2>Serving</h2>
-          <ul>
-            <li>The serve must be hit underhand and below the server’s waist.</li>
-            <li>The shuttle must travel diagonally across the court into the opponent’s service box.</li>
-            <li>In singles: serve from the right when the score is even, and from the left when it’s odd.</li>
-          </ul>
-        </div>
+      <div class="rule-category">
+        <h2 class="rule-heading" onclick="toggleRules(this)">🏸 General Rules <i class="fas fa-chevron-down"></i></h2>
+        <ul class="rule-list">
+          <li>Games are played to 21 points (rally scoring).</li>
+          <li>Win by at least 2 points (up to max 30).</li>
+          <li>If the shuttle touches the ground, the rally ends.</li>
+          <li>No double hits or carrying the shuttle.</li>
+          <li>Only one service attempt is allowed per point.</li>
+        </ul>
+      </div>
 
-        <div class="rules-box">
-          <h2>Gameplay</h2>
-          <ul>
-            <li>A rally begins with a serve and continues until the shuttle hits the ground, goes out, or a fault occurs.</li>
-            <li>A player may only hit the shuttle once per side.</li>
-            <li>The shuttle must not touch the ceiling, walls, or a player’s body/clothing.</li>
-          </ul>
+      <div class="rule-category">
+        <h2 class="rule-heading" onclick="toggleRules(this)">👤 Singles Rules <i class="fas fa-chevron-down"></i></h2>
+        <ul class="rule-list">
+          <li>Play is 1v1.</li>
+          <li>Use narrow and long court boundaries.</li>
+          <li>Serve from the right side when your score is even, left if odd.</li>
+          <li>Each rally scores a point, regardless of who served.</li>
+        </ul>
+      </div>
 
-          <h2>Faults</h2>
-          <ul>
-            <li>If the shuttle lands outside the court boundaries.</li>
-            <li>If the shuttle does not cross the net.</li>
-            <li>If a player touches the net with their body or racket.</li>
-            <li>If a player hits the shuttle twice in one rally.</li>
-          </ul>
-
-          <h2>Winning a Match</h2>
-          <ul>
-            <li>The first player/pair to win 2 games wins the match.</li>
-          </ul>
-        </div>
+      <div class="rule-category">
+        <h2 class="rule-heading" onclick="toggleRules(this)">👥 Doubles Rules <i class="fas fa-chevron-down"></i></h2>
+        <ul class="rule-list">
+          <li>Play is 2v2.</li>
+          <li>Use wide and short court for service; wide and long for rallies.</li>
+          <li>Each pair gets only one service turn before rotating.</li>
+          <li>Players alternate who serves based on position and score.</li>
+        </ul>
       </div>
     </div>
-  </section>
   </main>
-  <footer>
-    <p>Telephone - +64 123 4567</p>
-    <p>Address - 16 Howe Street, Freemans Bay, Auckland 1011 </p>
-    <p>Email - badmintton@aggs.school.nz</p>
-  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleRules(el) {
+      el.classList.toggle("active");
+      el.nextElementSibling.classList.toggle("show");
+    }
+  </script>
+  <footer class="site-footer">
+  <div class="section-content footer-content">
+    <div class="footer-left">
+      <h2 class="footer-logo">🏸 AGGS Badminton</h2>
+      <p>Smash limits, serve greatness.</p>
+    </div>
+
+    <div class="footer-social">
+      <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 AGGS Badminton Club. All rights reserved.</p>
+  </div>
+</footer>
 </body>
 </html>
